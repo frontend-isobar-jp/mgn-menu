@@ -1,0 +1,29 @@
+{
+  "name": "mgn-menu",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./src/mgn-menu.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --hot --inline",
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development"
+  },
+  "keywords": [
+    "menu",
+    "js",
+    "library",
+    "ECMA script",
+    "not jQuery"
+  ],
+  "author": "Dentsu Isobar (https://github.com/frontend-isobar-jp)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {}
+}
