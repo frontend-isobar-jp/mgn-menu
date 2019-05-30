@@ -143,8 +143,10 @@ License: Dentsu Isobar All Rights Reserved.
         var this_ = this;
 
         if( this.noScroll ) this.htmlTag.style.position = "static";
-
-        window.scroll( 0, this.scrollVal );
+        
+        if( this.noScroll ) {
+            window.scroll( 0, this.scrollVal );
+        }
 
         this.RemoveClass(this.menu,this.activeName);
         this.RemoveClass(this.globalNavElm,this.activeName);

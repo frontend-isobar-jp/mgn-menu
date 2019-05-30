@@ -22,7 +22,7 @@ ___
 # Import
 
 ```
-import mgnScrollNav from 'mgn-menu';
+import mgnMenu from 'mgn-menu';
 ```
 
 ___
@@ -30,7 +30,7 @@ ___
 # Constructor
 
 ```
-new mgnScrollNav( element [, option] )
+new mgnMenu( element [, option] )
 ```
 |Argument|Data type|Default|Descroption|
 |:-------|:--------|:------|:----------|
