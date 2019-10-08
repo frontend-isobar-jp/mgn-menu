@@ -34,7 +34,9 @@ License: Dentsu Isobar All Rights Reserved.
         this.scrollVal = null;
         this.baseWinWidth = window.innerWidth;
 
+        this.OpenStart = function(){};
         this.OpenEnd = function(){};
+        this.CloseStart = function(){};
         this.CloseEnd = function(){};
 
         if( this.menu ) {
@@ -93,6 +95,7 @@ License: Dentsu Isobar All Rights Reserved.
     **/
     mgnMenu.prototype.Open = function(i) {
 
+
         if( !this.menu ) {
             console.error( this.selector + ": Not Found" );
             return false;
@@ -100,6 +103,8 @@ License: Dentsu Isobar All Rights Reserved.
 
         var this_ = this;
         this.scrollVal = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+
+        this_.OpenStart();
 
         this.AddClass(this.menu,this.activeName);
         this.AddClass(this.globalNavElm,this.activeName);
@@ -135,6 +140,7 @@ License: Dentsu Isobar All Rights Reserved.
     **/
     mgnMenu.prototype.Close = function() {
 
+
         if( !this.menu ) {
             console.error( this.selector + ": Not Found" );
             return false;
@@ -142,8 +148,10 @@ License: Dentsu Isobar All Rights Reserved.
 
         var this_ = this;
 
+        this_.CloseStart();
+
         if( this.noScroll ) this.htmlTag.style.position = "static";
-        
+
         if( this.noScroll ) {
             window.scroll( 0, this.scrollVal );
         }

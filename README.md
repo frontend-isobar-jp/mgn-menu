@@ -52,7 +52,9 @@ ___
 |:-------|:--------|:------|
 |Open( element )|String|Open Menu.|
 |Close( element )|String|Close Menu.|
-|OpenEnd = function(){};|-|To be executed after opening Menu.|
+|OpenStart = function(){};|-|To be executed before opening Menu.|
+|CloseEnd = function(){};|-|To be executed after closing Menu.|
+|CloseStart = function(){};|-|To be executed before opening Menu.|
 |CloseEnd = function(){};|-|To be executed after closing Menu.|
 
 ___
@@ -82,8 +84,14 @@ setTimeout(function() {
 
 },1000);
 
+menu.OpenStart = function() {
+    console.log("openStart")
+}
 menu.OpenEnd = function() {
     console.log("openEnd")
+}
+menu.CloseStart = function() {
+    console.log("closeStart")
 }
 menu.CloseEnd = function() {
     console.log("closeEnd")

@@ -18,8 +18,14 @@ setTimeout(function() {
 
 },1000);
 
+menu.OpenStart = function() {
+    console.log("openStart")
+}
 menu.OpenEnd = function() {
     console.log("openEnd")
+}
+menu.CloseStart = function() {
+    console.log("closeStart")
 }
 menu.CloseEnd = function() {
     console.log("closeEnd")
